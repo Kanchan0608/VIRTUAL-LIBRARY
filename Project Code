@@ -1,1 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <title><Image</title>
+    <title>My Webpage</title>
+    <title>Text Positioning Example</title>
+    <style>
+    .positioned-text {
+      position: relative;
+      top: 50px;
+      right: 50px;
+      padding: 10px;
+  }
+     </style>
+</head>
+<body>
+  <script>
+    AFRAME.registerComponent('cursor-listener', {
+        init: function () {
+            const itemId = this.el.getAttribute('cursor-listener');
 
+            this.el.addEventListener('click', () => {
+                let link;
+                if (itemId === 'Book') {
+                    link = "https://www.amazon.in/gp/aw/d/9357311661/?encoding=UTF8&pd_rd_plhdr=t&aaxitk=86b1a8beff0d54c4398ebdf235c73ba2&hsa_cr_id=0&qid=1692177907&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&ref=sbx_be_s_sparkle_mcd_asin_0_img&pd_rd_w=lU1lS&content-id=amzn1.sym.df9fe057-524b-4172-ac34-9a1b3c4e647d%3Aamzn1.sym.df9fe057-524b-4172-ac34-9a1b3c4e647d&pf_rd_p=df9fe057-524b-4172-ac34-9a1b3c4e647d&pf_rd_r=WGB0HF1SD2TD5KMES3M6&pd_rd_wg=yRQbL&pd_rd_r=5de34103-4394-4b64-a16a-8b1d204cf83e";
+                } 
+                else if (itemId === 'shirt') {
+                    link = 'https://www.amazon.in/Allen-Solly-Sweatshirt-ASSTORGPN40121L_Grey-Melange/dp/B07DPMK4Z5/ref=sr_1_1_sspa?keywords=sweatshirts+for+men&qid=1692009864&sprefix=swshirts+for+men%2Caps%2C217&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1';
+                }
+    
+                if (link) {
+                    window.open(link, '_blank');
+                }
+            });
+        }
+    });
+</script>
+    <a-scene>
+        <!--Floor-->
+        <a-box position="0 0 0.013" scale="40 -0.020 40" color="grey" material="" geometry=""></a-box>
+        <!--Wall1-->
+        <a-box position="0.000 10 -19.777" scale="40.000 20.000 0.200" color="skyblue" material="" geometry=""></a-box>
+          <img src="c:\Users\GIRIRAJ KISHOR\Desktop\hemlata docs\photo.jpg" alt="pic">
+          <!-- Shelf 1 -->
+           <a-box position="-0.012 7.116 -18.724" width="40" height="0.30" depth="2" color="darkgoldenrod"></a-box>
+           <a-box position="-0.014 5.194 -18.724" width="40" height="0.30" depth="2" color="darkgoldenrod"></a-box>
+           <a-box position="-0.064 3.238 -18.724" width="40" height="0.30" depth="2" color="darkgoldenrod"></a-box>
+           <a-box position="-0.053 2.000 -18.724" width="40" height="0.30" depth="2" color="darkgoldenrod"></a-box>
+           
+        <!--Wall2-->
+        <a-box position="20.018 10" scale="0.200 20.000 40.000" color="lightpink" material="" geometry=""></a-box>
+        <!--Wall3-->
+        <a-box position="-20.201 10 3.614" scale="0.200 20.000 32.000" color="lightpink" material="" geometry=""></a-box>
+        <!--Wall4-->
+        <a-box position="0.000 10 19.967" scale="40.000 20.000 0.200" color="skyblue" material="" geometry=""></a-box>
+        <!--shelf2-->
+          <a-box position="-0.012 6.953 18.673" width="40" height="0.30" depth="2" color="darkgoldenrod"></a-box>
+          <a-box position="-0.014 5.194 18.673" width="40" height="0.30" depth="2" color="darkgoldenrod"></a-box>
+          <a-box position="-0.064 3.358 18.673" width="40" height="0.30" depth="2" color="darkgoldenrod"></a-box>
+        
+        
+
+      <a-gltf-model position="-86.688 1.951 -6.895" rotation="0 90 0" scale="4.5 1.200 0.500" src="3d_models\table.glb"></a-gltf-model>
+      <a-gltf-model position="-61.378 1.798 -7.889" rotation="0 90 0" scale="4.5 1.200 0.500" src="3d_models\table.glb"></a-gltf-model>
+      <a-gltf-model position="-38.0 2.136 -49.79" rotation="0 0 0" scale="2  1.200 0.500" src="3d_models\table.glb"></a-gltf-model>
+      <a-gltf-model position="-2.282 1.761 -39.737" rotation="0 90 0" scale="3.00 1.200 0.500" src="3d_models\table.glb"></a-gltf-model>
+      <a-gltf-model position="-40.393 1.845 2.621" rotation="0 90 0" scale="3.00 1.200 0.500" src="3d_models\table.glb"></a-gltf-model>
+      <a-gltf-model position="1.027 1.685 0.281" rotation="0 90 0" scale="3.00 1.200 0.500" src="3d_models\table.glb"></a-gltf-model>
+      <a-gltf-model position="-57.836 5.777 -41.266" rotation="0 90 0" scale="0.100 0.080 0.100" src="3d_models\book2.glb" cursor-listener="Book"></a-gltf-model>
+      <a-gltf-model position="3.044 5.777 -0.138" rotation="0 90 0" scale="0.100 0.080 0.100" src="3d_models\book2.glb" ></a-gltf-model>
+      <a-gltf-model position="-57.725 5.802 -49.852" rotation="0 90 0" scale="0.100 0.080 0.100" src="3d_models\book2.glb" ></a-gltf-model>
+      <a-gltf-model position="15.587 8.583 -19.487" rotation="90 0 0" scale="0.100 0.080 0.100" src="3d_models\book2.glb" ></a-gltf-model>
+      <a-gltf-model position="-10.615 5.800 17.479" rotation="90 0 0" scale="0.100 0.070 0.045" src="3d_models\book2.glb" ></a-gltf-model>
+      <a-gltf-model position="-27.103 5.942 -59.724" rotation="90 0 0" scale="0.100 0.070 0.045" src="3d_models\book2.glb" ></a-gltf-model>
+    
+       <!--Floor2-->
+       <a-box position="0.206 -0.074 -40.005" scale="40 -0.020 40" color="grey" material="" geometry=""></a-box>
+       <!--R2Wall1-->
+       <a-box position="0.105 10 -59.901" scale="40.000 20.000 0.200" color="skyblue" material="" geometry=""></a-box>
+        
+       <!--R2Wall2-->
+       <a-box position="20.233 10 -39.902" scale="0.200 20.000 40.000" color="pink" material="" geometry=""></a-box>
+        <img src="pictures\Find the best global talent_.jpg" alt="Image Description" width="400" height="300">
+       <!--R2Wall3-->
+       <a-box position="-20.201 10 -44.258" scale="0.200 20.000 32.000" color="pink" material="" geometry=""></a-box>
+
+      <!--HALL-->
+       <!--Floor3-->
+       <a-box position="-59.783 0.265 -19.988" scale="80 -0.020 80" color="grey" material="" geometry=""></a-box>
+       <!--R2Wall1-->
+       <a-box position="-60.032 10 -60.156" scale="80.000 20.000 0.200" color="skyblue" material="" geometry=""></a-box>
+       <!--shelf-->
+         <a-box position="-40.217 8.459 -59.171" width="40" height="0.30" depth="2" color="darkgoldenrod"></a-box>
+         <a-box position="-40.283 6.953 -59.171" width="40" height="0.30" depth="2" color="darkgoldenrod"></a-box>
+         <a-box position="-40.217 5.194 -59.171" width="40" height="0.30" depth="2" color="darkgoldenrod"></a-box>
+
+         <a-box position="-59.814 5.480 -48.104" scale="1 80 1" rotation="0 90 90" width="10" height="0.30" depth="1" color="darkgoldenrod"></a-box>
+         <a-box position="-59.814 5.480 -48.104" scale="1 80 1" rotation="90 90 90" width="9" height="0.30" depth="1" color="darkgoldenrod"></a-box>
+         <a-box position="-59.793 0.782 -48.104" scale="1 80 1" rotation="90 90 90" width="9" height="0.30" depth="1" color="darkgoldenrod"></a-box>
+         <a-box position="-80.544 5.812 -48.104" scale="1 80 1" rotation="90 90 90" width="9" height="0.30" depth="1" color="darkgoldenrod"></a-box>
+         <a-box position="-80.814 0.809 -48.104" scale="1 80 1" rotation="90 90 90" width="9" height="0.30" depth="1" color="darkgoldenrod"></a-box>
+         <a-box position="-80.849 5.764 -47.847" scale="1 80 1" rotation="0 90 90" width="10" height="0.30" depth="1" color="darkgoldenrod"></a-box>
+       <!--R2wall2-->
+       <a-box position="-60.032 10 19.637" scale="80.000 20.000 0.200" color="skyblue" material="" geometry=""></a-box>
+        
+       <!--R2Wall3-->
+       <a-box position="-99.939 10 -20.849" scale="0.200 20.000 62.000" color="pink" material="" geometry=""></a-box>
+
+       <!--TOPIC-->
+        <h1>VIRTUAL LIBRARY </h1>
+        <p style="color: Black;"></p>
+        <div class="positioned-text">
+          </div>
+        
+
+      <!--CHAIRS-->
+      <a-gltf-model position="0.628 -1.278 4.082" rotation="0 0 0" scale="1.970 1.500 1.780" src="3d_models\chair.glb"></a-gltf-model>
+      <a-gltf-model position="0.371 -1.278 -2.005" rotation="0 0 0" scale="1.970 1.500 1.780" src="3d_models\chair.glb"></a-gltf-model>
+      <a-gltf-model position="0.455 -1.278 -7.581" rotation="0 0 0" scale="1.970 1.500 1.780" src="3d_models\chair.glb"></a-gltf-model>
+      <a-gltf-model position="0.646 -1.278 -13.456" rotation="0 0 0" scale="1.970 1.500 1.780" src="3d_models\chair.glb"></a-gltf-model>
+      <a-gltf-model position="-62.737 -0.824 -25.07" rotation="0 0 0" scale="1.970 1.500 7.230" src="3d_models\chair.glb"></a-gltf-model>
+      <a-gltf-model position="-42.402 -0.824 -51.640" rotation="0 0 0" scale="1.970 1.500 1.780" src="3d_models\chair.glb"></a-gltf-model>
+      <a-gltf-model position="-38.923 -0.824 6.065" rotation="0 0 0" scale="1.970 1.500 1.780" src="3d_models\chair.glb"></a-gltf-model>
+      <a-gltf-model position="-38.503 -0.824 -11.613" rotation="0 0 0" scale="1.970 1.500 1.780" src="3d_models\chair.glb"></a-gltf-model>
+      <a-gltf-model position="-38.923 -0.824 -12.117" rotation="0 0 0" scale="1.970 1.500 5.330" src="3d_models\chair.glb"></a-gltf-model>
+      <a-gltf-model position="-3.730 -1.278 -35.536" rotation="0 0 0" scale="1.970 1.500 1.780" src="3d_models\chair.glb"></a-gltf-model>
+      <a-gltf-model position="-4.096 -1.278 -40.591" rotation="0 0 0" scale="1.970 1.500 1.780" src="3d_models\chair.glb"></a-gltf-model>
+      <a-gltf-model position="-3.690 -1.278 -59.186" rotation="0 0 0" scale="1.970 1.500 5.330" src="3d_models\chair.glb"></a-gltf-model>
+      <a-gltf-model position="-40.292 -0.824 -42.715" rotation="0 90 0" scale="1.970 1.540 2.270" src="3d_models\chair.glb"></a-gltf-model>
+      <a-gltf-model position="-48.257 -0.824 -42.715" rotation="0 90 0" scale="1.971 1.540 2.720" src="3d_models\chair.glb"></a-gltf-model>
+      <a-gltf-model position="-88.22 -0.824 -33.984" rotation="0 0 0" scale="1.970 1.50 6.480" src="3d_models\chair.glb"></a-gltf-model>
+      <a-gltf-model position="-88.22 -0.824 -9.372" rotation="0 0 0" scale="1.970 1.500 1.780" src="3d_models\chair.glb"></a-gltf-model>
+      <a-gltf-model position="-88.22 -0.824 -2.797" rotation="0 0 0" scale="1.970 1.500 1.780" src="3d_models\chair.glb"></a-gltf-model>
+      <a-gltf-model position="-87.88 -0.824 2.462" rotation="0 0 0" scale="1.970 1.500 1.780" src="3d_models\chair.glb"></a-gltf-model>
+      <a-gltf-model position="-92.40 -0.824 10.472" rotation="0 90 0" scale="1.970 1.540 2.720" src="3d_models\chair.glb"></a-gltf-model>
+      <a-gltf-model position="-59.665 -0.964 -27.144" rotation="0 0 0" scale="1.970 1.540 1.780" src="3d_models\chair.glb"></a-gltf-model>
+      <a-gltf-model position="-59.541 -0.964 -21.496" rotation="0 0 0" scale="1.970 1.540 1.780" src="3d_models\chair.glb"></a-gltf-model>
+      <a-gltf-model position="-60.840 -0.964 0.021" rotation="0 0 0" scale="1.970 1.540 1.780" src="3d_models\chair.glb"></a-gltf-model>
+
+      <!--IMAGES-->
+      <img src="pictures\Metal Poster Small Changes Can Make.jpg" alt="Image 1" width="3" height="4">
+      <img src="pictures\Premium Vector _ Graphic design quote in hand drawn style.jpg" alt="Image 2" width="3" height="4">
+      <img src="pictures\Steve Jobs by Donnie Ray Crisp.jpg" alt="Image 3" width="3.5" height="4.5">
+      <img src="pictures\Steve Jobs quotes.jpg" alt="Image 4" width="2" height="5">
+      <img src="pictures\#Wallpapers❤😁.jpg" alt="Image 5" width="4.5" height="3">
+
+      <!--MORE 3D MODELS-->
+      <!--Kindle-->
+      <a-gltf-model position="0.031 5.904 -35.082" rotation="90 90 90" scale="0.370 0.320 0.045" src="3d_models\amazon_kindle_paperwhite.glb" ></a-gltf-model>
+      <a-gltf-model position="-36.863 5.841 9.951" rotation="90 90 90" scale="0.370 0.320 0.045" src="3d_models\amazon_kindle_paperwhite.glb" ></a-gltf-model>
+      <a-gltf-model position="-58.117 5.678 -5.499" rotation="90 90 00" scale="0.370 0.320 0.045" src="3d_models\amazon_kindle_paperwhite.glb" ></a-gltf-model>
+      
+      <!--Books-->
+      <a-gltf-model position="-54.980 5.779 -6.832" rotation="0 0 0" scale="2.0 5.0 5.0" src="3d_models\vintage_books.glb" ></a-gltf-model>
+      <a-gltf-model position="4.131 5.760 -34.386" rotation="0 0 0" scale="2.0 5.0 5.0" src="3d_models\vintage_books.glb" ></a-gltf-model>
+      <a-gltf-model position="-47.363 1.599 -45.113" rotation="0 0 0" scale="5.0 5.0 5.0" src="3d_models\open_books.glb" ></a-gltf-model>
+      <a-gltf-model position="-89.084 1.785 8.108" rotation="0 0 0" scale="5.0 5.0 5.0" src="3d_models\open_books.glb" ></a-gltf-model>
+      <a-gltf-model position="-43.866 1.880 -3.588" rotation="0 0 0" scale="5.0 5.0 5.0" src="3d_models\open_books.glb" ></a-gltf-model>
+      <a-gltf-model position="-43.151 2.799 4.153" rotation="0 0 0" scale="4 4 4" src="3d_models\open_books.glb" ></a-gltf-model>
+      <a-gltf-model position="3.512 -1.508 9.466" rotation="0 90 0" scale="2 2 2" src="3d_models\lcd_monitor.glb" ></a-gltf-model>
+      <a-gltf-model position="-35.947 -0.763 -47.256" rotation="0 -90 0" scale="2.0 2.0 2.0" src="3d_models\lcd_monitor.glb" ></a-gltf-model>
+      <a-gltf-model position="-84.093 -0.974 -4.352" rotation="0 -180 0" scale="2.0 2.0 2.0" src="3d_models\lcd_monitor.glb" ></a-gltf-model>
+      <a-gltf-model position="-59.861 -0.974 3.784" rotation="0 -180 0" scale="2.0 2.0 2.0" src="3d_models\lcd_monitor.glb" ></a-gltf-model>
+      
+      <a-gltf-model position="-22.660 0.181 9.787" rotation="0 -90 0" scale="5.0 4.0 5.0" src="3d_models\bookshelf_with_books_light_wood.glb" ></a-gltf-model>
+      <a-gltf-model position="-62.988 4.847 -52.699" rotation="0 0 0" scale="0.130 0.280 0.300" src="3d_models\library_books.glb" ></a-gltf-model>
+      <a-gltf-model position="-80.283 5.891 -6.550" rotation="0 0 0" scale="2 5 5" src="3d_models\vintage_books.glb" ></a-gltf-model>
+      <a-gltf-model position="-82.622 5.277 -52.085" rotation="0 0 0" scale="0.130 0.280 0.300" src="3d_models\library_books.glb" ></a-gltf-model>
+
+      <a-gltf-model position="-13.753 8.583 -19.487" rotation="90 0 0" scale="0.100 0.080 0.100" src="3d_models\book2.glb" ></a-gltf-model>
+      <a-gltf-model position="-4.83 8.583 -19.487" rotation="90 0 0" scale="0.100 0.080 0.100" src="3d_models\book2.glb" ></a-gltf-model>
+      <a-gltf-model position="4.889 8.488 -19.487 8.583 -19.487" rotation="90 0 0" scale="0.100 0.080 0.100" src="3d_models\book2.glb" ></a-gltf-model>
+
+      <a-gltf-model position="11.971 4.327 17.488" rotation="90 0 0" scale="0.100 0.070 0.045" src="3d_models\book2.glb" ></a-gltf-model>
+      <a-gltf-model position="7.633 5.855 -19.714" rotation="90 0 0" scale="0.100 0.070 0.045" src="3d_models\book2.glb" ></a-gltf-model>
+      <a-gltf-model position="-9.840 3.977 -19.744" rotation="90 0 0" scale="0.100 0.070 0.045" src="3d_models\book2.glb" ></a-gltf-model>
+
+      <a-gltf-model position="18.059 0.017 -31.495" rotation="0 -90 0" scale="5.0 4.0 5.0" src="3d_models\bookshelf_with_books_light_wood.glb" ></a-gltf-model>
+      <a-gltf-model position="-46.585 0.261 -57.934" rotation="0 360 0" scale="5.0 4.0 5.0" src="3d_models\bookshelf_with_books_light_wood.glb" ></a-gltf-model>
+      <a-gltf-model position="-54.980 5.779 -6.832" rotation="0 0 0" scale="2.0 5.0 5.0" src="3d_models\vintage_books.glb" ></a-gltf-model>
+    
+    
+    
+      <!--camera positioning-->
+    <a-entity id="rig" position="-97.728 7.331 -33.468" rotation="0 180.000 0">
+      <a-camera id="camera" look-controls position="0 1.6 0">
+          </a-entity>
+      </a-camera>
+    </a-entity>
+      
+       
+     <!--"Roof"-->
+     <a-box position="-39.843 19.995 -20.035" scale="120 0 80" color="grey" material="" geometry=""></a-box>
